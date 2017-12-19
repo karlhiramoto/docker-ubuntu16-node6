@@ -22,4 +22,5 @@ RUN apt -qqy upgrade
 RUN apt-get install -y nodejs google-chrome-stable
 RUN npm install -g @angular/cli
 
-
+#free up space
+RUN rm -rf /var/lib/apt/lists/*
