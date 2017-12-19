@@ -4,9 +4,11 @@ RUN apt-get -qq update
 RUN apt -qqy upgrade
 
 #install packages
-RUN apt-get install -y xvfb chromium-chromedriver chromium-browser curl \
+RUN apt-get install -y xvfb curl \
   build-essential xvfb default-jre kmod git ssh-askpass openssh-client \
   python python-openssl zlib1g-dev 
+
+# chromium-chromedriver chromium-browser
 
 ENV DISPLAY :99.0
 
